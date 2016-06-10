@@ -36,7 +36,6 @@ public class SoapServerApplication {
     public Endpoint endpoint(HelloServiceImpl helloService) {
         EndpointImpl endpoint = new EndpointImpl(springBus(), helloService);
         endpoint.publish("/HelloService");
-        endpoint.setWsdlLocation("HelloService.wsdl");
         return endpoint;
     }
 }
